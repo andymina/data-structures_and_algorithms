@@ -1,5 +1,22 @@
-// Arrays areCan be initialized in three different
+let arr = [1, 2, 3];
+console.log("Original array: ", arr);
+console.log();
 
-let arr = []; // as empty
-let arr2 = [1, 2, 3]; // prefilled with data
-let arr3 = new Array(); // as an Object
+// Accessing an element
+console.log("0th element:", arr[0]);
+console.log("Last element: ", arr[arr.length - 1]);
+
+console.log();
+
+// Array.push()
+let newSize = arr.push(4);
+console.log("Updated arr: ", arr);
+console.log("New size: ", newSize);
+console.log("Array size: ", arr.length);
+
+console.log();
+
+// Array.pop()
+let removedElement = arr.pop();
+console.log("Updated arr: ", arr);
+console.log("Removed element: ", removedElement);
