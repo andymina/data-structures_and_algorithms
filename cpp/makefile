@@ -1,5 +1,5 @@
 CXXFLAGS= -std=c++11
-DEPEND= Node.hpp LinkedList.hpp Stack.hpp Queue.hpp
+DEPEND= BinaryNode.hpp Node.hpp LinkedList.hpp Stack.hpp Queue.hpp
 
 main: main.o
 	g++ $(CXXFLAGS) -o main main.o

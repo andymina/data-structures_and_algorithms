@@ -1,26 +1,20 @@
 #include <iostream>
 #include <string>
-#include "Queue.hpp"
+#include "BinaryNode.hpp"
 
 using std::cout;
 using std::endl;
 
 int main(){
-   Queue<int> *q = new Queue<int>();
+   BinaryNode<int> *b = new BinaryNode<int>(10);
+   b->setLeft(new BinaryNode<int>(9));
+   b->setRight(new BinaryNode<int>(11));
 
-   cout << "made the queue" << endl;
+   cout << "root: " << b->getData() << endl;
+   cout << "left child: " << b->getLeft()->getData() << endl;
+   cout << "right child: " << b->getRight()->getData() << endl;
 
-   q->enqueue(1);
-   q->enqueue(2);
-   q->enqueue(3);
-
-   cout << q->toString() << endl;
-
-   int result = q->dequeue();
-   cout << q->toString() << endl;
-   cout << std::to_string(result) << endl;
-
-   delete q;
+   delete b;
 
    return 0;
 }
